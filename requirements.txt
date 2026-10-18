@@ -6,6 +6,8 @@ langsmith>=0.7.31
 langchain-community
 langchain-core>=1.2.28
 langchain-openai>=1.1.14
+langchain-google-genai
+langchain-google-vertexai
 langchain-text-splitters>=1.1.2
 notebook
 langchain-tavily
