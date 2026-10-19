@@ -1,3 +1,10 @@
+import os
+try:
+    from dotenv import load_dotenv
+    load_dotenv()
+except ImportError:
+    pass
+
 from langchain_core.messages import SystemMessage
 from langchain_google_genai import ChatGoogleGenerativeAI
 
@@ -34,7 +41,7 @@ def divide(a: int, b: int) -> float:
 tools = [add, multiply, divide]
 
 # Define LLM with bound tools
-llm = ChatGoogleGenerativeAI(model="gemini-3.8-flash", temperature=0)
+llm = ChatGoogleGenerativeAI(model="gemini-3.5-flash", temperature=0)
 llm_with_tools = llm.bind_tools(tools)
 
 # System message
